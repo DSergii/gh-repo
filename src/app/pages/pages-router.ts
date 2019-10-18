@@ -5,7 +5,6 @@ import { TableComponent } from './table/table.component';
 import { DetailComponent } from './detail/detail.component';
 import {DeliveryResolve} from './detail/detail.resolver';
 
-
 export const routes: Routes = [
   {
     path: '',

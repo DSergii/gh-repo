@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { loginAnimation } from '../../animation';
-import {AuthService} from '../services/auth.service';
-import {StorageHelper} from '../../shared/storage.helper';
-import {Router} from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { StorageHelper } from '../../shared/storage.helper';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.scss'],
   animations: [loginAnimation]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   
   public loginForm: FormGroup;
 
@@ -24,10 +24,6 @@ export class LoginComponent implements OnInit {
       email: '',
       password: ''
     });
-  }
-
-  ngOnInit() {
-  
   }
   
   login(): void {

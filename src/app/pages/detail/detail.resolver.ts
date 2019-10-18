@@ -9,4 +9,5 @@ export class DeliveryResolve implements Resolve<any> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return this.repoSrv.getUser(route.queryParams.name);
   }
+  
 }

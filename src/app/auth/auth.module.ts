@@ -5,8 +5,6 @@ import { SharedModule } from '../shared/shared.module';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth.guard';
 
-
-
 @NgModule({
   declarations: [
     LoginComponent
