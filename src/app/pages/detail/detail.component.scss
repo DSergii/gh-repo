@@ -1,0 +1,20 @@
+.owner-box {
+  .card {
+    width: 375px;
+    box-shadow: 1px 2px 5px #989393;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: 125px;
+      height: auto;
+      margin: 10px auto;
+    }
+
+    strong  {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+}

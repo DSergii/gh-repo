@@ -1,0 +1,19 @@
+<div class="login-holder" [@loginAnimation]>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-element">
+      <label>Login with email</label>
+      <div class="input-holder">
+        <input type="text" placeholder="Email" formControlName="email">
+        <span class="error" *ngIf="loginForm.get('email').hasError('emailError')">{{loginForm.get('email').getError('emailError')}}</span>
+      </div>
+      <div class="input-holder">
+        <input type="password" placeholder="Password" formControlName="password">
+        <span class="error" *ngIf="loginForm.get('password').hasError('pswError')">{{loginForm.get('password').getError('pswError')}}</span>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">Login</button>
+    <div class="holder">
+      <button type="button" (click)="loginWithGH()">Login with GitHub</button>
+    </div>
+  </form>
+</div>

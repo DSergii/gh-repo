@@ -1,0 +1,28 @@
+.list-group-item {
+  display: flex;
+  align-items: start;
+
+  > a {
+    display: inline-block;
+    margin-right: 20px;
+    img {
+      display: block;
+      width: 125px;
+      height: auto;
+    }
+  }
+  span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .spec-info {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+
+    strong {
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+}

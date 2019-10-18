@@ -1,0 +1,36 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Logo</th>
+    <th scope="col">Repo Name</th>
+    <th scope="col">Owner</th>
+    <th scope="col">Published</th>
+    <th scope="col">Info</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of repos$ | async">
+    <td>
+      <a [href]="item.owner.html_url" target="_blank">
+        <img md-card-image [src]="item.owner.avatar_url">
+      </a>
+    </td>
+    <td>{{item.name}}</td>
+    <td>
+      <a [routerLink]="['/detail']" [queryParams]="{name: item.owner.login }">{{item.owner.login}}</a>
+    </td>
+    <td>{{item.pushed_at | date:'medium'}}</td>
+    <td>
+      <span>Git: {{item.git_url}}</span>
+      <span>Https: {{item.clone_url}}</span>
+      <span>SSH: {{item.ssh_url}}</span>
+      <span>Link: <a [href]="item.html_url" target="_blank">{{item.html_url}}</a></span>
+      <div class="spec-info">
+        <strong>watchers: {{item.watchers}}</strong>
+        <strong>forks: {{item.forks}}</strong>
+        <strong>stars: {{item.stargazers_count}}</strong>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of repos$ | async">
+    <a [href]="item.owner.html_url" target="_blank">
+      <img md-card-image [src]="item.owner.avatar_url">
+    </a>
+    <div class="info-holder">
+      <h3>{{item.name}}</h3>
+      <strong>Owner: <a [routerLink]="['/detail']" [queryParams]="{name: item.owner.login }">{{item.owner.login}}</a></strong>
+      <span>{{item.pushed_at | date:'medium'}}</span>
+      <span>Git: {{item.git_url}}</span>
+      <span>Https: {{item.clone_url}}</span>
+      <span>SSH: {{item.ssh_url}}</span>
+      <span>Link: <a [href]="item.html_url" target="_blank">{{item.html_url}}</a></span>
+    </div>
+    <div class="spec-info">
+      <strong>watchers: {{item.watchers}}</strong>
+      <strong>forks: {{item.forks}}</strong>
+      <strong>stars: {{item.stargazers_count}}</strong>
+    </div>
+  </li>
+</ul>

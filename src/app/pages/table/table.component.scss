@@ -1,0 +1,29 @@
+.table {
+
+  a {
+    display: inline-block;
+    margin-right: 20px;
+    img {
+      display: block;
+      width: 125px;
+      height: auto;
+    }
+  }
+  span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  strong {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  strong:first-child {
+    margin-left: 0;
+  }
+
+  tr:last-child {
+    th {
+      width: 10%;
+    }
+  }
+}

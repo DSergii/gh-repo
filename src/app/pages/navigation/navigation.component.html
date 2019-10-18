@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link " [routerLink]="'/blocks'" routerLinkActive="active">Blocks</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="'/table'" routerLinkActive="active">Table</a>
+    </li>
+  </ul>
+  <div class="form-holder">
+    <form [formGroup]="searchForm" (ngSubmit)="search(searchForm.value)" class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" formControlName="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  <div class="user-box" (click)="activeDropDown = !activeDropDown">
+    <figure>
+      <img [src]="user.avatar" alt="user">
+    </figure>
+    <span class="user-name">{{user.name}}</span>
+    <div class="drop-down" *ngIf="activeDropDown">
+      <button class="btn btn-success" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</nav>
